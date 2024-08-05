@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './App.css'
 
 function App() {
-  const [encounterNumber, setEncounterNumber] = useState(59)
+  const [encounterNumber, setEncounterNumber] = useState(0)
 
   const rollNumber = () => {
     setEncounterNumber(Math.floor(Math.random() * 180) + 1)
@@ -31,7 +31,7 @@ function App() {
 
   return (
     <>
-      <h1>Squerk Egglocke brain relaxer</h1>
+      <h1>Egglocke brain relaxer</h1>
       <button className='button' onClick={rollNumber}>Roll for Egg</button>
       <p className='text'>{encounterNumber != 0 ? `Roll: ${encounterNumber}`: ''}</p>
       <p className='text'>{encounterText()}</p>
